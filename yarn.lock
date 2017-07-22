@@ -236,7 +236,7 @@ autoprefixer@^6.3.1:
 
 autoprefixer@^7.1.2:
   version "7.1.2"
-  resolved "http://npm-repository.liveramp.net:4873/autoprefixer/-/autoprefixer-7.1.2.tgz#fbeaf07d48fd878e0682bf7cbeeade728adb2b18"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.1.2.tgz#fbeaf07d48fd878e0682bf7cbeeade728adb2b18"
   dependencies:
     browserslist "^2.1.5"
     caniuse-lite "^1.0.30000697"
@@ -263,7 +263,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.22.0:
 
 babel-core@^6.24.1, babel-core@^6.25.0:
   version "6.25.0"
-  resolved "http://npm-repository.liveramp.net:4873/babel-core/-/babel-core-6.25.0.tgz#7dd42b0463c742e9d5296deb3ec67a9322dad729"
+  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.25.0.tgz#7dd42b0463c742e9d5296deb3ec67a9322dad729"
   dependencies:
     babel-code-frame "^6.22.0"
     babel-generator "^6.25.0"
@@ -437,7 +437,7 @@ babel-plugin-syntax-class-properties@^6.8.0:
 
 babel-plugin-syntax-dynamic-import@^6.18.0:
   version "6.18.0"
-  resolved "http://npm-repository.liveramp.net:4873/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
 
 babel-plugin-syntax-exponentiation-operator@^6.8.0:
   version "6.13.0"
@@ -465,7 +465,7 @@ babel-plugin-transform-async-to-generator@^6.22.0:
 
 babel-plugin-transform-class-properties@^6.24.1:
   version "6.24.1"
-  resolved "http://npm-repository.liveramp.net:4873/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
   dependencies:
     babel-helper-function-name "^6.24.1"
     babel-plugin-syntax-class-properties "^6.8.0"
@@ -698,7 +698,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
 
 babel-polyfill@^6.23.0:
   version "6.23.0"
-  resolved "http://npm-repository.liveramp.net:4873/babel-polyfill/-/babel-polyfill-6.23.0.tgz#8364ca62df8eafb830499f699177466c3b03499d"
+  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.23.0.tgz#8364ca62df8eafb830499f699177466c3b03499d"
   dependencies:
     babel-runtime "^6.22.0"
     core-js "^2.4.0"
@@ -706,7 +706,7 @@ babel-polyfill@^6.23.0:
 
 babel-preset-env@^1.6.0:
   version "1.6.0"
-  resolved "http://npm-repository.liveramp.net:4873/babel-preset-env/-/babel-preset-env-1.6.0.tgz#2de1c782a780a0a5d605d199c957596da43c44e4"
+  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.6.0.tgz#2de1c782a780a0a5d605d199c957596da43c44e4"
   dependencies:
     babel-plugin-check-es2015-constants "^6.22.0"
     babel-plugin-syntax-trailing-function-commas "^6.22.0"
@@ -747,7 +747,7 @@ babel-preset-flow@^6.23.0:
 
 babel-preset-react@^6.24.1:
   version "6.24.1"
-  resolved "http://npm-repository.liveramp.net:4873/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
+  resolved "https://registry.yarnpkg.com/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
   dependencies:
     babel-plugin-syntax-jsx "^6.3.13"
     babel-plugin-transform-react-display-name "^6.23.0"
@@ -1131,13 +1131,13 @@ code-point-at@^1.0.0:
 
 coffee-loader@^0.7.3:
   version "0.7.3"
-  resolved "http://npm-repository.liveramp.net:4873/coffee-loader/-/coffee-loader-0.7.3.tgz#fadbc6efd6fc7ecc88c5b3046a2c292066bcb54a"
+  resolved "https://registry.yarnpkg.com/coffee-loader/-/coffee-loader-0.7.3.tgz#fadbc6efd6fc7ecc88c5b3046a2c292066bcb54a"
   dependencies:
     loader-utils "^1.0.2"
 
 coffee-script@^1.12.7:
   version "1.12.7"
-  resolved "http://npm-repository.liveramp.net:4873/coffee-script/-/coffee-script-1.12.7.tgz#c05dae0cb79591d05b3070a8433a98c9a89ccc53"
+  resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.7.tgz#c05dae0cb79591d05b3070a8433a98c9a89ccc53"
 
 color-convert@^1.0.0, color-convert@^1.3.0:
   version "1.9.0"
@@ -1197,7 +1197,7 @@ compressible@~2.0.10:
 
 compression-webpack-plugin@^1.0.0:
   version "1.0.0"
-  resolved "http://npm-repository.liveramp.net:4873/compression-webpack-plugin/-/compression-webpack-plugin-1.0.0.tgz#5c5eb6afd08ca6a5d66006eeef71da17b01bd676"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-1.0.0.tgz#5c5eb6afd08ca6a5d66006eeef71da17b01bd676"
   dependencies:
     async "2.4.1"
     webpack-sources "^1.0.1"
@@ -1362,7 +1362,7 @@ css-color-names@0.0.4:
 
 css-loader@^0.28.4:
   version "0.28.4"
-  resolved "http://npm-repository.liveramp.net:4873/css-loader/-/css-loader-0.28.4.tgz#6cf3579192ce355e8b38d5f42dd7a1f2ec898d0f"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.4.tgz#6cf3579192ce355e8b38d5f42dd7a1f2ec898d0f"
   dependencies:
     babel-code-frame "^6.11.0"
     css-selector-tokenizer "^0.7.0"
@@ -1816,7 +1816,7 @@ extglob@^0.3.1:
 
 extract-text-webpack-plugin@^3.0.0:
   version "3.0.0"
-  resolved "http://npm-repository.liveramp.net:4873/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#90caa7907bc449f335005e3ac7532b41b00de612"
+  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#90caa7907bc449f335005e3ac7532b41b00de612"
   dependencies:
     async "^2.4.1"
     loader-utils "^1.1.0"
@@ -1861,7 +1861,7 @@ fbjs@^0.8.9:
 
 file-loader@^0.11.2:
   version "0.11.2"
-  resolved "http://npm-repository.liveramp.net:4873/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
   dependencies:
     loader-utils "^1.0.2"
 
@@ -2050,7 +2050,7 @@ glob-parent@^2.0.0:
 
 glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@~7.1.1:
   version "7.1.2"
-  resolved "http://npm-repository.liveramp.net:4873/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -2497,7 +2497,7 @@ js-tokens@^3.0.0:
 
 js-yaml@^3.4.3, js-yaml@^3.9.0:
   version "3.9.0"
-  resolved "http://npm-repository.liveramp.net:4873/js-yaml/-/js-yaml-3.9.0.tgz#4ffbbf25c2ac963b8299dc74da7e3740de1c18ce"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.0.tgz#4ffbbf25c2ac963b8299dc74da7e3740de1c18ce"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -3013,7 +3013,7 @@ node-pre-gyp@^0.6.36:
 
 node-sass@^4.5.3:
   version "4.5.3"
-  resolved "http://npm-repository.liveramp.net:4873/node-sass/-/node-sass-4.5.3.tgz#d09c9d1179641239d1b97ffc6231fdcec53e1568"
+  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.3.tgz#d09c9d1179641239d1b97ffc6231fdcec53e1568"
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -3222,7 +3222,7 @@ path-browserify@0.0.0:
 
 path-complete-extname@^0.1.0:
   version "0.1.0"
-  resolved "http://npm-repository.liveramp.net:4873/path-complete-extname/-/path-complete-extname-0.1.0.tgz#c454702669f31452f8193aa6168915fa31692f4a"
+  resolved "https://registry.yarnpkg.com/path-complete-extname/-/path-complete-extname-0.1.0.tgz#c454702669f31452f8193aa6168915fa31692f4a"
 
 path-exists@^2.0.0:
   version "2.1.0"
@@ -3454,7 +3454,7 @@ postcss-load-plugins@^2.3.0:
 
 postcss-loader@^2.0.6:
   version "2.0.6"
-  resolved "http://npm-repository.liveramp.net:4873/postcss-loader/-/postcss-loader-2.0.6.tgz#8c7e0055a3df1889abc6bad52dd45b2f41bbc6fc"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.6.tgz#8c7e0055a3df1889abc6bad52dd45b2f41bbc6fc"
   dependencies:
     loader-utils "^1.1.0"
     postcss "^6.0.2"
@@ -3680,7 +3680,7 @@ postcss-simple-vars@^4.0.0:
 
 postcss-smart-import@^0.7.5:
   version "0.7.5"
-  resolved "http://npm-repository.liveramp.net:4873/postcss-smart-import/-/postcss-smart-import-0.7.5.tgz#df9a9c6dd60d916e5e0670d1c57d03af5d3dcc31"
+  resolved "https://registry.yarnpkg.com/postcss-smart-import/-/postcss-smart-import-0.7.5.tgz#df9a9c6dd60d916e5e0670d1c57d03af5d3dcc31"
   dependencies:
     babel-runtime "^6.23.0"
     lodash "^4.17.4"
@@ -3742,7 +3742,7 @@ postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.2, postcss@^6.0.3, postcss@^6.0.6:
 
 precss@^2.0.0:
   version "2.0.0"
-  resolved "http://npm-repository.liveramp.net:4873/precss/-/precss-2.0.0.tgz#7f567e3318e06d44c8fdbf9e58452e8358bf4b71"
+  resolved "https://registry.yarnpkg.com/precss/-/precss-2.0.0.tgz#7f567e3318e06d44c8fdbf9e58452e8358bf4b71"
   dependencies:
     postcss "^6.0.3"
     postcss-advanced-variables "1.2.2"
@@ -3795,7 +3795,7 @@ promise@^7.1.1:
 
 prop-types@^15.5.10:
   version "15.5.10"
-  resolved "http://npm-repository.liveramp.net:4873/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
@@ -3866,7 +3866,7 @@ querystringify@~1.0.0:
 
 rails-erb-loader@^5.0.2:
   version "5.0.2"
-  resolved "http://npm-repository.liveramp.net:4873/rails-erb-loader/-/rails-erb-loader-5.0.2.tgz#7ebf66d087f9873900b307added7aecae64d7033"
+  resolved "https://registry.yarnpkg.com/rails-erb-loader/-/rails-erb-loader-5.0.2.tgz#7ebf66d087f9873900b307added7aecae64d7033"
   dependencies:
     loader-utils "^1.1.0"
     lodash.defaults "^4.2.0"
@@ -3899,7 +3899,7 @@ rc@^1.1.7:
 
 react-dom@^15.6.1:
   version "15.6.1"
-  resolved "http://npm-repository.liveramp.net:4873/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.1.0"
@@ -3908,7 +3908,7 @@ react-dom@^15.6.1:
 
 react@^15.6.1:
   version "15.6.1"
-  resolved "http://npm-repository.liveramp.net:4873/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
     create-react-class "^15.6.0"
     fbjs "^0.8.9"
@@ -4095,7 +4095,7 @@ requires-port@1.0.x, requires-port@1.x.x:
 
 resolve-url-loader@^2.1.0:
   version "2.1.0"
-  resolved "http://npm-repository.liveramp.net:4873/resolve-url-loader/-/resolve-url-loader-2.1.0.tgz#27c95cc16a4353923fdbdc2dbaf5eef22232c477"
+  resolved "https://registry.yarnpkg.com/resolve-url-loader/-/resolve-url-loader-2.1.0.tgz#27c95cc16a4353923fdbdc2dbaf5eef22232c477"
   dependencies:
     adjust-sourcemap-loader "^1.1.0"
     camelcase "^4.0.0"
@@ -4166,7 +4166,7 @@ sass-graph@^2.1.1:
 
 sass-loader@^6.0.6:
   version "6.0.6"
-  resolved "http://npm-repository.liveramp.net:4873/sass-loader/-/sass-loader-6.0.6.tgz#e9d5e6c1f155faa32a4b26d7a9b7107c225e40f9"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-6.0.6.tgz#e9d5e6c1f155faa32a4b26d7a9b7107c225e40f9"
   dependencies:
     async "^2.1.5"
     clone-deep "^0.3.0"
@@ -4492,7 +4492,7 @@ strip-json-comments@~2.0.1:
 
 style-loader@^0.18.2:
   version "0.18.2"
-  resolved "http://npm-repository.liveramp.net:4873/style-loader/-/style-loader-0.18.2.tgz#cc31459afbcd6d80b7220ee54b291a9fd66ff5eb"
+  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.18.2.tgz#cc31459afbcd6d80b7220ee54b291a9fd66ff5eb"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
@@ -4767,7 +4767,7 @@ webpack-dev-middleware@^1.11.0:
 
 webpack-dev-server@^2.6.0:
   version "2.6.0"
-  resolved "http://npm-repository.liveramp.net:4873/webpack-dev-server/-/webpack-dev-server-2.6.0.tgz#8a861acac73097afed031f35826447a3013a4eb3"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.6.0.tgz#8a861acac73097afed031f35826447a3013a4eb3"
   dependencies:
     ansi-html "0.0.7"
     bonjour "^3.5.0"
@@ -4793,14 +4793,14 @@ webpack-dev-server@^2.6.0:
 
 webpack-manifest-plugin@^1.2.1:
   version "1.2.1"
-  resolved "http://npm-repository.liveramp.net:4873/webpack-manifest-plugin/-/webpack-manifest-plugin-1.2.1.tgz#e02f0846834ce98dca516946ee3ee679745e7db1"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-1.2.1.tgz#e02f0846834ce98dca516946ee3ee679745e7db1"
   dependencies:
     fs-extra "^0.30.0"
     lodash ">=3.5 <5"
 
 webpack-merge@^4.1.0:
   version "4.1.0"
-  resolved "http://npm-repository.liveramp.net:4873/webpack-merge/-/webpack-merge-4.1.0.tgz#6ad72223b3e0b837e531e4597c199f909361511e"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.0.tgz#6ad72223b3e0b837e531e4597c199f909361511e"
   dependencies:
     lodash "^4.17.4"
 
@@ -4813,7 +4813,7 @@ webpack-sources@^1.0.1:
 
 webpack@^3.3.0:
   version "3.3.0"
-  resolved "http://npm-repository.liveramp.net:4873/webpack/-/webpack-3.3.0.tgz#ce2f9e076566aba91f74887133a883fd7da187bc"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.3.0.tgz#ce2f9e076566aba91f74887133a883fd7da187bc"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
