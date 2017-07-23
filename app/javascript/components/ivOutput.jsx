@@ -7,6 +7,7 @@ class IvOutput extends React.Component {
     return (
       <div>
         Output
+        {this.props.pokemon}
         {this.props.cp}
       </div>
     )

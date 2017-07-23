@@ -5,11 +5,12 @@ import { MuiThemeProvider } from 'material-ui/styles';
 // My stuff
 import CpInput from '../components/cpInput'
 import IvOutput from '../components/ivOutput'
+import PokemonPicker from '../components/pokemonPicker'
 
 const MainApp = React.createClass({
   getInitialState() {
     return {
-      pokemonId: 0,
+      pokemon: '',
       cp: '',
     };
   },
@@ -18,13 +19,19 @@ const MainApp = React.createClass({
     return (
       <MuiThemeProvider>
         <div>
-          main component ok
+          <PokemonPicker 
+            value={this.state.pokemon}
+            loading={true}
+            onChange={this.handlePokemonChange}
+          />
           <CpInput 
             value={this.state.cp}
             loading={true}
             onChange={this.handleCpChange}
           />
+          Level Slider (with quick buttons)
           <IvOutput 
+            pokemon={this.state.pokemon}
             cp={this.state.cp}
           />
         </div> 
@@ -32,7 +39,13 @@ const MainApp = React.createClass({
     )
   },
   
-  handleCpChange(e){
+  handlePokemonChange(e) {
+    this.setState({
+      pokemon: e.target.value
+    })
+  },
+
+  handleCpChange(e) {
     this.setState({
       cp: e.target.value
     })

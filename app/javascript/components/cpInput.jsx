@@ -8,7 +8,6 @@ class CpInput extends React.Component {
   render () {
     return (
       <div>
-        cp input comp
         <Input
           value={this.props.value}
           loading={this.props.loading}
