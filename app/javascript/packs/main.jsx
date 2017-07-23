@@ -13,7 +13,7 @@ const MainApp = React.createClass({
   render () {
     return (
       <div>
-        main component
+        main component ok
         <CpInput 
           cp={this.state.cp}
         />
