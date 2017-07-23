@@ -1,5 +1,6 @@
 import React from 'react'
-// import { NumericInput } from "@blueprintjs/core";
+// import NumberInput from 'material-ui-number-input';
+import { TextField } from 'material-ui';
 
 
 class CpInput extends React.Component {
@@ -7,6 +8,13 @@ class CpInput extends React.Component {
     return (
       <div>
         cp input comp
+        <TextField
+          min={0}
+          value={this.props.value}
+          prefix={'CP'}
+          placeholder={'Enter CP'}
+          type='number'
+        />
       </div>
     )
   }

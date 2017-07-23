@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { MuiThemeProvider } from 'material-ui/styles';
+
+// My stuff
 import CpInput from '../components/cpInput'
 
 const MainApp = React.createClass({
@@ -12,12 +15,14 @@ const MainApp = React.createClass({
 
   render () {
     return (
-      <div>
-        main component ok
-        <CpInput 
-          cp={this.state.cp}
-        />
-      </div>
+      <MuiThemeProvider>
+        <div>
+          main component ok
+          <CpInput 
+            cp={this.state.cp}
+          />
+        </div> 
+      </MuiThemeProvider>
     )
   }
 })
