@@ -1,7 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import CpInput from '../components/cpInput'
+
+const MainApp = React.createClass({
+  getInitialState() {
+    return {
+      pokemonId: 0,
+      cp: null,
+    };
+  },
+
+  render () {
+    return (
+      <div>
+        main component
+        <CpInput 
+          cp={this.state.cp}
+        />
+      </div>
+    )
+  }
+})
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <MainApp />,
   document.getElementById('main-root')
 );
