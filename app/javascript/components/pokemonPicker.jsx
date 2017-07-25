@@ -1,8 +1,9 @@
 import React from 'react'
-import { Input } from 'semantic-ui-react';
-import PokemonConstants from '../constants/pokemonConstants'
+import { Dropdown } from 'semantic-ui-react';
 var _ = require('underscore');
 var titleize = require("underscore.string/titleize");
+
+import PokemonConstants from '../constants/pokemonConstants'
 
 class PokemonPicker extends React.Component {
 
@@ -11,14 +12,16 @@ class PokemonPicker extends React.Component {
 
     return (
       <div>
-        <Input
+        <Dropdown
           value={this.props.value}
           onChange={this.props.onChange}
           label='Pokémon'
           placeholder={'Pick a Pokémon'}
-          list='pokedex'
+          search
+          selection
+          options={PokemonConstants.POKEMON_OPTIONS}
         />
-        {pokeList}
+
       </div>
     )
   }
@@ -29,7 +32,7 @@ class PokemonPicker extends React.Component {
         { _.map(PokemonConstants.POKEDEX_BY_NAME, (key, pokemon) => {
           return <option value={titleize(pokemon)} key={key}/>;
         }) }
-      </datalist> 
+      </datalist>
     return datalist;
   }
 }

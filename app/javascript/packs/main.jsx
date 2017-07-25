@@ -10,7 +10,7 @@ import PokemonPicker from '../components/pokemonPicker'
 const MainApp = React.createClass({
   getInitialState() {
     return {
-      pokemon: '',
+      pokemonId: '',
       cp: '',
     };
   },
@@ -19,29 +19,31 @@ const MainApp = React.createClass({
     return (
       <MuiThemeProvider>
         <div>
-          <PokemonPicker 
-            value={this.state.pokemon}
+          <PokemonPicker
+            value={this.state.pokemonId}
             loading={true}
             onChange={this.handlePokemonChange}
           />
-          <CpInput 
+          <CpInput
             value={this.state.cp}
             loading={true}
             onChange={this.handleCpChange}
           />
           Level Slider (with quick buttons)
-          <IvOutput 
-            pokemon={this.state.pokemon}
+          <IvOutput
+            pokemonId={this.state.pokemonId}
             cp={this.state.cp}
           />
-        </div> 
+        </div>
       </MuiThemeProvider>
     )
   },
-  
-  handlePokemonChange(e) {
+
+  handlePokemonChange(e, data) {
+    // console.log(data)
+    // debugger
     this.setState({
-      pokemon: e.target.value
+      pokemonId: data.value
     })
   },
 
