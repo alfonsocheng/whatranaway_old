@@ -1,5 +1,5 @@
 export default {
-  POKEDEX_BY_NAME : {
+  POKEDEX_BY_NAME: {
     "bulbasaur": 1,
     "ivysaur": 2,
     "venusaur": 3,

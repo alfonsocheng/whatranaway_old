@@ -33,6 +33,7 @@ const MainApp = React.createClass({
           <IvOutput
             pokemonId={this.state.pokemonId}
             cp={this.state.cp}
+            ivs={this.state.ivs}
           />
         </div>
       </MuiThemeProvider>

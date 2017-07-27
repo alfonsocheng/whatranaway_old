@@ -6,78 +6,95 @@ var titleize = require("underscore.string/titleize");
 import PokemonConstants from '../constants/pokemonConstants'
 
 class IvOutput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ivs: [],
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.pokemonId > 0 && nextProps.cp > 0) {
+      console.log(`IVs for poke ${nextProps.pokemonId} with cp ${nextProps.cp}`)
+      fetch('./pokemon/0/1')
+        .then(function(response) {
+          return response.json()
+        })
+        .then(function(data) {
+          console.log(data);
+        })
+        .catch(function(response){
+          console.log('fetch error')
+          console.log(response)
+        });
+    }
+    // debugger
+  }
 
   render () {
-    const ivTable = this.getTable();
+    let ivTable = this.getTable(this.state.ivs);
 
-    return (  
+    return (
       <div>
-        Output
-        {this.props.pokemonId}
-        {this.props.cp}
         {ivTable}
       </div>
     )
   }
-// { this.props.pokemon ? titleize(this.props.pokemon) : 'Select a Pokemon!' }
-  getTable () {
-    return (
-      <Table celled structured>
-      <Table.Header>
-        <Table.Row colSpan='5'>
 
+  getTable (ivs) {
+    let poke = this.props.pokemonId ? titleize(_.invert(PokemonConstants.POKEDEX_BY_NAME)[this.props.pokemonId]) : '';
+    let cp = this.props.cp || 0;
+    console.log(ivs);
+    // console.log(PokemonConstants.POKEDEX_BY_NAME)
+    // console.log(_.invert(PokemonConstants.POKEDEX_BY_NAME)[this.props.pokemonId])
+    // debugger
+    return (
+      <Table celled structured collapsing textAlign='center'>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell colSpan='5'>
+            { poke ? poke + ' ' : 'Select a Pokémon! ' }
+            { cp > 0 ? cp + 'CP' : 'Enter a CP!' }
+          </Table.HeaderCell>
         </Table.Row>
         <Table.Row>
-          <Table.HeaderCell rowSpan='2'>Name</Table.HeaderCell>
-          <Table.HeaderCell rowSpan='2'>Type</Table.HeaderCell>
-          <Table.HeaderCell rowSpan='2'>Files</Table.HeaderCell>
-          <Table.HeaderCell colSpan='3'>Languages</Table.HeaderCell>
+          <Table.HeaderCell rowSpan='2'>Level</Table.HeaderCell>
+          <Table.HeaderCell rowSpan='2'>Percent</Table.HeaderCell>
+          <Table.HeaderCell colSpan='3'>IVs</Table.HeaderCell>
         </Table.Row>
         <Table.Row>
-          <Table.HeaderCell>Ruby</Table.HeaderCell>
-          <Table.HeaderCell>JavaScript</Table.HeaderCell>
-          <Table.HeaderCell>Python</Table.HeaderCell>
+          <Table.HeaderCell>Attack</Table.HeaderCell>
+          <Table.HeaderCell>Defense</Table.HeaderCell>
+          <Table.HeaderCell>Stamina</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
 
       <Table.Body>
         <Table.Row>
-          <Table.Cell>Alpha Team</Table.Cell>
-          <Table.Cell>Project 1</Table.Cell>
-          <Table.Cell textAlign='right'>2</Table.Cell>
-          <Table.Cell textAlign='center'>
-            CHECK
-          </Table.Cell>
-          <Table.Cell />
-          <Table.Cell />
+          <Table.Cell>1</Table.Cell>
+          <Table.Cell>80%</Table.Cell>
+          <Table.Cell>12</Table.Cell>
+          <Table.Cell>12</Table.Cell>
+          <Table.Cell>12</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell rowSpan='3'>Beta Team</Table.Cell>
-          <Table.Cell>Project 1</Table.Cell>
-          <Table.Cell textAlign='right'>52</Table.Cell>
-          <Table.Cell textAlign='center'>
-            CHECK
-          </Table.Cell>
-          <Table.Cell />
-          <Table.Cell />
+          <Table.Cell rowSpan='3'>3</Table.Cell>
+          <Table.Cell>80%</Table.Cell>
+          <Table.Cell>11</Table.Cell>
+          <Table.Cell>11</Table.Cell>
+          <Table.Cell>11</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Project 2</Table.Cell>
-          <Table.Cell textAlign='right'>12</Table.Cell>
-          <Table.Cell />
-          <Table.Cell textAlign='center'>
-            CHECK
-          </Table.Cell>
-          <Table.Cell />
+          <Table.Cell>80%</Table.Cell>
+          <Table.Cell>10</Table.Cell>
+          <Table.Cell>10</Table.Cell>
+          <Table.Cell>12</Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>Project 3</Table.Cell>
-          <Table.Cell textAlign='right'>21</Table.Cell>
-          <Table.Cell textAlign='center'>
-            CHECK
-          </Table.Cell>
-          <Table.Cell />
-          <Table.Cell />
+          <Table.Cell>80%</Table.Cell>
+          <Table.Cell>7</Table.Cell>
+          <Table.Cell>8</Table.Cell>
+          <Table.Cell>15</Table.Cell>
         </Table.Row>
       </Table.Body>
     </Table>
