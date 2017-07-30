@@ -16,7 +16,7 @@ class IvOutput extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.pokemonId > 0 && nextProps.cp > 0) {
       console.log(`IVs for poke ${nextProps.pokemonId} with cp ${nextProps.cp}`)
-      fetch(`./pokemon/0/1`)
+      fetch(`./pokemon/${nextProps.pokemonId}/${nextProps.cp}`)
         .then((response) => {
           return response.json()
         })
@@ -48,9 +48,6 @@ class IvOutput extends React.Component {
     let poke = this.props.pokemonId ? titleize(_.invert(PokemonConstants.POKEDEX_BY_NAME)[this.props.pokemonId]) : '';
     let cp = this.props.cp || 0;
     console.log(ivs);
-    // console.log(PokemonConstants.POKEDEX_BY_NAME)
-    // console.log(_.invert(PokemonConstants.POKEDEX_BY_NAME)[this.props.pokemonId])
-    // debugger
     return (
       <Table celled structured collapsing textAlign='center'>
       <Table.Header>
