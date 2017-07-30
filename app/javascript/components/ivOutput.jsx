@@ -59,9 +59,8 @@ class IvOutput extends React.Component {
       )
     } else {
       let rows = [];
-      let levels = _.keys(ivsByLevel).sort().reverse();
-      // console.log(this.props.raid)
-      if (this.props.raid) {
+      let levels = _.keys(ivsByLevel).sort(); //.reverse();
+      if (this.props.raid === 'true') {
         let level20Index = levels.indexOf('20');
         if (level20Index >= 0) {
           levels.splice(level20Index, 1)
@@ -70,8 +69,6 @@ class IvOutput extends React.Component {
       }
       // console.log(levels)
       _.each(levels, (level) => {
-        // console.log(level);
-        // console.log(ivsByLevel[level]);
         _.each(ivsByLevel[level], (ivPossibility) => {
           rows.push(
             this.createTableRow(level, ivPossibility, ivPossibility === ivsByLevel[level][0], ivsByLevel[level].length, this.props.raid ? level != 20 : false)
@@ -113,7 +110,6 @@ class IvOutput extends React.Component {
   }
 
   getIvsByLevel(ivs) {
-    // console.log(ivs);
     let ivsByLevel = {}
     if (ivs[0] && ivs[0][0] === null) {
       console.log(`no IVs possible! Try something else between ${ivs[0][1]} and ${ivs[0][2]}`)
