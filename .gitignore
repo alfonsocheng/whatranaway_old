@@ -21,5 +21,6 @@
 /yarn-error.log
 
 .byebug_history
-/public/packs
+# unignore packs for heroku deploy
+# /public/packs
 /node_modules
