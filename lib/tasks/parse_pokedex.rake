@@ -1,3 +1,4 @@
+# this rake task is used to generate some jsx files manually
 namespace :pokemon do
   task parse_pokedex: :environment do
     p 'start parsing pokedex'
@@ -10,7 +11,7 @@ namespace :pokemon do
           types: ([] << row[2] << row[3]).compact,
         }
       end
-    end    
+    end
     # this was used to generate constant called POKEMON_BY_NAME
     # p "{"
     # pokemon_hash.each do |key, info|

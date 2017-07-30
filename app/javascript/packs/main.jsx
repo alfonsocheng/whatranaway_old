@@ -26,7 +26,6 @@ const MainApp = React.createClass({
           />
           <CpInput
             value={this.state.cp}
-            loading={true}
             onChange={this.handleCpChange}
           />
           Level Slider (with quick buttons)

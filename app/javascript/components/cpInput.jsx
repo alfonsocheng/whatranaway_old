@@ -10,7 +10,6 @@ class CpInput extends React.Component {
       <div>
         <Input
           value={this.props.value}
-          loading={this.props.loading}
           onChange={this.props.onChange}
           label='CP'
           labelPosition='left corner'

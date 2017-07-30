@@ -4,7 +4,9 @@ class PokeController < ApplicationController
     # require "#{Rails.root}/lib/possible_ivs_by_cp/0.rb"
     require "#{Rails.root}/lib/possible_ivs_by_cp/#{params[:id]}.rb"
     p params
-    p PokemonConstants::CP_HASH
+    p "Pokemon#{params[:id]}Constants::CP_HASH".constantize
+
+    debugger
 
     possibilities = [
       [1,2,3]

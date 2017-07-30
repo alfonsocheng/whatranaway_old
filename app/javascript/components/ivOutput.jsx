@@ -16,14 +16,17 @@ class IvOutput extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.pokemonId > 0 && nextProps.cp > 0) {
       console.log(`IVs for poke ${nextProps.pokemonId} with cp ${nextProps.cp}`)
-      fetch('./pokemon/0/1')
-        .then(function(response) {
+      fetch(`./pokemon/0/1`)
+        .then((response) => {
           return response.json()
         })
-        .then(function(data) {
+        .then((data) => {
           console.log(data);
+          this.setState({
+            ivs: data
+          });
         })
-        .catch(function(response){
+        .catch((response) => {
           console.log('fetch error')
           console.log(response)
         });
