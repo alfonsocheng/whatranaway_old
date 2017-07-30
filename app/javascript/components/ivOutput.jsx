@@ -60,7 +60,7 @@ class IvOutput extends React.Component {
     } else {
       let rows = [];
       let levels = _.keys(ivsByLevel).sort().reverse();
-      console.log(this.props.raid)
+      // console.log(this.props.raid)
       if (this.props.raid) {
         let level20Index = levels.indexOf('20');
         if (level20Index >= 0) {
@@ -68,7 +68,7 @@ class IvOutput extends React.Component {
           levels.unshift('20');
         }
       }
-      console.log(levels)
+      // console.log(levels)
       _.each(levels, (level) => {
         // console.log(level);
         // console.log(ivsByLevel[level]);
