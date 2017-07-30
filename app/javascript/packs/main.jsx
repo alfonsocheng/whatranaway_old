@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom'
 import { MuiThemeProvider } from 'material-ui/styles';
 
 // My stuff
-import CpInput from '../components/cpInput'
-import IvOutput from '../components/ivOutput'
 import PokemonPicker from '../components/pokemonPicker'
+import CpInput from '../components/cpInput'
+import RaidCheckbox from '../components/raidCheckbox'
+import IvOutput from '../components/ivOutput'
 
 const MainApp = React.createClass({
   getInitialState() {
     return {
       pokemonId: '',
       cp: '',
+      raidCheckboxChecked: true,
+      raidCheckboxLabel: 'was a raid boss',
     };
   },
 
@@ -28,11 +31,16 @@ const MainApp = React.createClass({
             value={this.state.cp}
             onChange={this.handleCpChange}
           />
-          Level Slider (with quick buttons)
+          <RaidCheckbox
+            checked={this.state.raidCheckboxChecked}
+            label={this.state.raidCheckboxLabel}
+            onChange={this.handleRaidChange}
+          />
           <IvOutput
             pokemonId={this.state.pokemonId}
             cp={this.state.cp}
             ivs={this.state.ivs}
+            raid={this.state.raidCheckboxChecked}
           />
         </div>
       </MuiThemeProvider>
@@ -51,7 +59,16 @@ const MainApp = React.createClass({
     this.setState({
       cp: e.target.value
     })
-  }
+  },
+
+  handleRaidChange() {
+    let newChecked = !this.state.raidCheckboxChecked;
+    let newLabel = newChecked ? 'was a raid boss' : 'not a raid boss';
+    this.setState({
+      raidCheckboxChecked: newChecked,
+      raidCheckboxLabel: newLabel,
+    })
+  },
 })
 
 ReactDOM.render(

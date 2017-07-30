@@ -15,7 +15,7 @@ class IvOutput extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.pokemonId > 0 && nextProps.cp > 0) {
-      console.log(`IVs for poke ${nextProps.pokemonId} with cp ${nextProps.cp}`)
+      // console.log(`IVs for poke ${nextProps.pokemonId} with cp ${nextProps.cp}`)
       fetch(`./pokemon/${nextProps.pokemonId}/${nextProps.cp}`)
         .then((response) => {
           return response.json()
@@ -31,7 +31,6 @@ class IvOutput extends React.Component {
           console.log(response)
         });
     }
-    // debugger
   }
 
   render () {
@@ -60,12 +59,22 @@ class IvOutput extends React.Component {
       )
     } else {
       let rows = [];
-      _.each(_.keys(ivsByLevel).sort().reverse(), (level) => {
-        console.log(level);
-        console.log(ivsByLevel[level]);
+      let levels = _.keys(ivsByLevel).sort().reverse();
+      console.log(this.props.raid)
+      if (this.props.raid) {
+        let level20Index = levels.indexOf('20');
+        if (level20Index >= 0) {
+          levels.splice(level20Index, 1)
+          levels.unshift('20');
+        }
+      }
+      console.log(levels)
+      _.each(levels, (level) => {
+        // console.log(level);
+        // console.log(ivsByLevel[level]);
         _.each(ivsByLevel[level], (ivPossibility) => {
           rows.push(
-            this.createTableRow(level, ivPossibility, ivPossibility === ivsByLevel[level][0], ivsByLevel[level].length)
+            this.createTableRow(level, ivPossibility, ivPossibility === ivsByLevel[level][0], ivsByLevel[level].length, this.props.raid ? level != 20 : false)
           );
         });
       });
@@ -75,37 +84,6 @@ class IvOutput extends React.Component {
         </Table.Body>
       )
     }
-
-    // tableBody = (
-    //   <Table.Body>
-    //     <Table.Row>
-    //       <Table.Cell>1</Table.Cell>
-    //       <Table.Cell>80%</Table.Cell>
-    //       <Table.Cell>12</Table.Cell>
-    //       <Table.Cell>12</Table.Cell>
-    //       <Table.Cell>12</Table.Cell>
-    //     </Table.Row>
-    //     <Table.Row>
-    //       <Table.Cell rowSpan='3'>3</Table.Cell>
-    //       <Table.Cell>80%</Table.Cell>
-    //       <Table.Cell>11</Table.Cell>
-    //       <Table.Cell>11</Table.Cell>
-    //       <Table.Cell>11</Table.Cell>
-    //     </Table.Row>
-    //     <Table.Row>
-    //       <Table.Cell>80%</Table.Cell>
-    //       <Table.Cell>10</Table.Cell>
-    //       <Table.Cell>10</Table.Cell>
-    //       <Table.Cell>12</Table.Cell>
-    //     </Table.Row>
-    //     <Table.Row>
-    //       <Table.Cell>80%</Table.Cell>
-    //       <Table.Cell>7</Table.Cell>
-    //       <Table.Cell>8</Table.Cell>
-    //       <Table.Cell>15</Table.Cell>
-    //     </Table.Row>
-    //   </Table.Body>
-    // )
 
     return (
       <Table celled structured collapsing textAlign='center'>
@@ -154,19 +132,33 @@ class IvOutput extends React.Component {
     return ivsByLevel;
   }
 
-  createTableRow(level, ivPossibility, firstOfItsLevel, rowSpan) {
+  createTableRow(level, ivPossibility, firstOfItsLevel, rowSpan, disabled) {
     // this creates a table row
     // firstOfItsLevel is true or false - determines whether to show the level
     // rowSpan is the number of IV possibilities in that level
-    return (
-      <Table.Row>
-        { firstOfItsLevel ? (<Table.Cell rowSpan={rowSpan}>{level}</Table.Cell>) : null }
-        <Table.Cell>{Math.round((ivPossibility[0] + ivPossibility[1] + ivPossibility[2]) * 1000 / 45) / 10}%</Table.Cell>
-        <Table.Cell>{ivPossibility[1]}</Table.Cell>
-        <Table.Cell>{ivPossibility[2]}</Table.Cell>
-        <Table.Cell>{ivPossibility[0]}</Table.Cell>
-      </Table.Row>
-    )
+    // eg createTableRow(30, [15,15,15], true, 1, false) would be for bulbasaur 841 that is not a raid boss
+
+    if (disabled) {
+      return (
+        <Table.Row disabled>
+          { firstOfItsLevel ? (<Table.Cell rowSpan={rowSpan}>{level}</Table.Cell>) : null }
+          <Table.Cell>{Math.round((ivPossibility[0] + ivPossibility[1] + ivPossibility[2]) * 1000 / 45) / 10}%</Table.Cell>
+          <Table.Cell>{ivPossibility[1]}</Table.Cell>
+          <Table.Cell>{ivPossibility[2]}</Table.Cell>
+          <Table.Cell>{ivPossibility[0]}</Table.Cell>
+        </Table.Row>
+      )
+    } else {
+      return (
+        <Table.Row>
+          { firstOfItsLevel ? (<Table.Cell rowSpan={rowSpan}>{level}</Table.Cell>) : null }
+          <Table.Cell>{Math.round((ivPossibility[0] + ivPossibility[1] + ivPossibility[2]) * 1000 / 45) / 10}%</Table.Cell>
+          <Table.Cell>{ivPossibility[1]}</Table.Cell>
+          <Table.Cell>{ivPossibility[2]}</Table.Cell>
+          <Table.Cell>{ivPossibility[0]}</Table.Cell>
+        </Table.Row>
+      )
+    }
   }
 }
 
